@@ -1,0 +1,13 @@
+{
+  "name": "color-format",
+  "version": "1.0.0",
+  "description": "Convert color format from RGB to HEX and vice versa",
+  "main": "index.js",
+  "keywords": [
+    "color",
+    "rgb",
+    "hex"
+  ],
+  "author": "Maria Kousta",
+  "license": "MIT"
+}

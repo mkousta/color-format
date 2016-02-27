@@ -30,14 +30,16 @@
       return '#' + hexToDec(r) + hexToDec(g) + hexToDec(b);
     },
 
-    hexToRgb: function(h) {
+    hexToRgb: function(h, options) {
       if(typeof h !== 'string') throw new TypeError('Expected a string input');
 
       if(h[0] === '#') h = h.slice(1);
 
       if(h.length != 6) throw new TypeError('Expected a 6 digit hex');
-
-      return [decToHex(h[0]+h[1]), decToHex(h[2]+h[3]), decToHex(h[4]+h[5])];
+      if(options && options.styling)
+        return 'rgb(' + decToHex(h[0]+h[1]) + ', ' + decToHex(h[2]+h[3]) + ', ' + decToHex(h[4]+h[5]) + ')';
+      else
+        return [decToHex(h[0]+h[1]), decToHex(h[2]+h[3]), decToHex(h[4]+h[5])];
     }
   };
 }));

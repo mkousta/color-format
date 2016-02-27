@@ -27,6 +27,11 @@ Convert a HEX to RGB:
 cf = require('colorformat');
 
 cf.hexToRgb('#e6f1f6'); //=> [ 230, 241, 246 ]
+
+or // if you want a styling string format
+
+cf.hexToRgb('#e6f1f6', { styling: true }); //=> 'rgb(230, 241, 246)'
+
 ```
 
 Note: [UMD](https://github.com/umdjs/umd) is also supported for browser use.

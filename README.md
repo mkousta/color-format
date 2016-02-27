@@ -22,3 +22,5 @@ cf = require('color-format');
 
 cf.hexToRgb('#e6f1f6'); //=> [ 230, 241, 246 ]
 ```
+
+Note: [UMD](https://github.com/umdjs/umd) is also supported for browser use.

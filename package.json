@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Convert color format from RGB to HEX and vice versa",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkousta/color-format.git"
+  },
   "keywords": [
     "color",
     "rgb",

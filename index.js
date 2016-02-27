@@ -35,7 +35,10 @@
 
       if(h[0] === '#') h = h.slice(1);
 
-      if(h.length != 6) throw new TypeError('Expected a 6 digit hex');
+      if(h.length === 3) h = h.replace(/(\w)/g, '$&$&');
+
+      if(h.length != 6) throw new TypeError('Expected a 3 or 6 digit hex');
+
       if(options && options.styling)
         return 'rgb(' + decToHex(h[0]+h[1]) + ', ' + decToHex(h[2]+h[3]) + ', ' + decToHex(h[4]+h[5]) + ')';
       else

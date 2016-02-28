@@ -7,11 +7,11 @@
     root.ColorFormat = factory();
   }
 }(this, function () {
-  function hexToDec(n) {
+  function decToHex(n) {
     return n.toString(16);
   }
 
-  function decToHex(n) {
+  function hexToDec(n) {
     return parseInt(n, 16);
   }
 
@@ -33,7 +33,7 @@
       }
       if(r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255)
         throw new Error('Expected arguments to be between 0 and 255');
-      return '#' + fixDigits(hexToDec(r)) + fixDigits(hexToDec(g)) + fixDigits(hexToDec(b));
+      return '#' + fixDigits(decToHex(r)) + fixDigits(decToHex(g)) + fixDigits(decToHex(b));
     },
 
     hexToRgb: function(h, options) {
@@ -46,9 +46,9 @@
       if(h.length != 6) throw new TypeError('Expected a 3 or 6 digit hex');
 
       if(options && options.styling)
-        return 'rgb(' + decToHex(h[0]+h[1]) + ', ' + decToHex(h[2]+h[3]) + ', ' + decToHex(h[4]+h[5]) + ')';
+        return 'rgb(' + hexToDec(h[0]+h[1]) + ', ' + hexToDec(h[2]+h[3]) + ', ' + hexToDec(h[4]+h[5]) + ')';
       else
-        return [decToHex(h[0]+h[1]), decToHex(h[2]+h[3]), decToHex(h[4]+h[5])];
+        return [hexToDec(h[0]+h[1]), hexToDec(h[2]+h[3]), hexToDec(h[4]+h[5])];
     }
   };
 }));

@@ -1,6 +1,6 @@
 {
   "name": "colorformat",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Convert color format from RGB to HEX and vice versa",
   "main": "index.js",
   "repository": {

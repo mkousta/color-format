@@ -14,6 +14,12 @@
   function decToHex(n) {
     return parseInt(n, 16);
   }
+
+  function fixDigits(s){
+    if(s.length != 2) return '0' + s;
+    else return s;
+  }
+
   return {
     rgbToHex: function(r, g, b) {
       if(typeof r!=='number' || typeof g!=='number' || typeof b!=='number') {
@@ -27,7 +33,7 @@
       }
       if(r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255)
         throw new Error('Expected arguments to be between 0 and 255');
-      return '#' + hexToDec(r) + hexToDec(g) + hexToDec(b);
+      return '#' + fixDigits(hexToDec(r)) + fixDigits(hexToDec(g)) + fixDigits(hexToDec(b));
     },
 
     hexToRgb: function(h, options) {

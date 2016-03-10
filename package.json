@@ -14,5 +14,12 @@
     "convert"
   ],
   "author": "Maria Kousta",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
 }

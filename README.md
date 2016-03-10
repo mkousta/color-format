@@ -40,3 +40,9 @@ Load the script `node_modules/colorformat/index.js` and then simply:
 ColorFormat.rgbToHex(230, 241, 246); // => '#e6f1f6'
 ```
 **Note:** Supports [UMD](https://github.com/umdjs/umd) for easier browser use with the tools of your preference.
+
+## How to run tests
+
+```
+npm test
+```
